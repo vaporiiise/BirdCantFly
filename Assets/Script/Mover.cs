@@ -7,6 +7,11 @@ public class Mover : MonoBehaviour
     public float MoveSpeed = 100f;
     void FixedUpdate()
     {
+        if (transform.position.x <= -30)
+        {
+            Destroy(gameObject);
+        }
+        
         Vector2 targetMovePos = transform.position;
         targetMovePos.x -= MoveSpeed * Time.deltaTime;
         transform.position = targetMovePos;

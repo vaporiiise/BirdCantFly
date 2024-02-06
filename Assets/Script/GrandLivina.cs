@@ -7,7 +7,7 @@ public class GrandLivina : MonoBehaviour
     public float upwardforce = 500;
     private Rigidbody2D _rigidbody;
     private Collider2D _collider;
-    public int INTEGER = 2;
+    public int integer = 2;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();

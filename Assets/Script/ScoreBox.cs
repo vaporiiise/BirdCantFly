@@ -12,9 +12,12 @@ public class ScoreBox : MonoBehaviour
     }
 
     // Update is called once per frame
-    void UpdateOnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (_scoremanager == null) { return; }
+
+        if (!collider.gameObject.CompareTag("Player"))
+            return;
 
 
         _scoremanager.AddScore(ScoreAmount);
