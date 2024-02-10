@@ -9,6 +9,12 @@ public class scoremanager : MonoBehaviour
     public void AddScore(int score)
     {
         Score += score;
-        Debug.Log(message: "currentscore " + Score);
+        Debug.Log(message: "Score" + Score);
+    }
+
+    public void Start()
+    {
+        PlayerPrefs.SetInt("finalscore", Score);
+        PlayerPrefs.Save();
     }
 }
